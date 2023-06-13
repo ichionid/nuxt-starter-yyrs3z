@@ -1,11 +1,21 @@
 <template>
-  <header>
-    <nav>
-      <ul>
-        <li><NuxtLink to="/about">About</NuxtLink></li>
-        <li><NuxtLink to="/posts/1">Post 1</NuxtLink></li>
-        <li><NuxtLink to="/posts/2">Post 2</NuxtLink></li>
-      </ul>
-    </nav>
-  </header>
+  <Tabs :items="navigationItems" />
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      navigationItems: [
+        { label: 'Systemer', url: '/systemoverblik' },
+        { label: 'Platforme', url: '/platformsoverblik' },
+        { label: 'IT-løsninger', url: '/løsningsoverblik' },
+        { label: 'Personale', url: '/personaleoverblik' },
+        { label: 'Webservices', url: '/webserviceoverblik' },
+        { label: 'Begreber', url: '/begrebsoverblik' },
+        { label: 'Om It-overblik', url: '/about' },
+      ],
+    };
+  },
+};
+</script>

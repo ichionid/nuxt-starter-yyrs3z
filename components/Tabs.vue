@@ -1,36 +1,19 @@
 <template>
   <nav class="flex flex-row px-12 lg:px-48 py-4">
     <ul class="flex flex-row basis-11/12">
-      <li
-        class="basis-1/8 text-center justify-center items-center min-w-min"
-        v-for="(item, index) in navigationItems"
-        :key="index"
-      >
-        <a class="min-w-min" :href="item.url">{{ item.label }}</a>
+      <li class="" v-for="(item, index) in items" :key="index">
+        <NavigationItem :url="item.url" :label="item.label" />
       </li>
     </ul>
-    <input
-      class="basis-1/12 py-4 leading-1 text-center justify-center items-center"
-      type="text"
-      placeholder="Search.."
-    />
   </nav>
 </template>
-
 <script>
 export default {
-  data() {
-    return {
-      navigationItems: [
-        { label: 'Systemer', url: '/systemoverblik' },
-        { label: 'Platforme', url: '/platformsoverblik' },
-        { label: 'IT-løsninger', url: '/løsningsoverblik' },
-        { label: 'Personale', url: '/personaleoverblik' },
-        { label: 'Webservices', url: '/webserviceoverblik' },
-        { label: 'Begreber', url: '/begrebsoverblik' },
-        { label: 'Om It-overblik', url: '/about' },
-      ],
-    };
+  props: {
+    items: {
+      type: Array,
+      required: true,
+    },
   },
 };
 </script>

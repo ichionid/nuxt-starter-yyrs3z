@@ -2,7 +2,15 @@
   <nav class="flex flex-row px-12 lg:px-48 py-4">
     <ul class="flex flex-row basis-11/12">
       <li
-        class="basis-1/8 text-center justify-center items-center min-w-min"
+        class="
+          basis-1/8
+          text-center
+          justify-center
+          items-center
+          min-w-min
+          whitespace-nowrap
+          px-1
+        "
         v-for="(item, index) in navigationItems"
         :key="index"
       >
@@ -10,7 +18,15 @@
       </li>
     </ul>
     <input
-      class="basis-1/12 py-4 leading-1 text-center justify-center items-center"
+      class="
+        basis-1/12
+        py-4
+        leading-1
+        text-center
+        justify-center
+        items-center
+        px-1
+      "
       type="text"
       placeholder="Search.."
     />
