@@ -31,6 +31,8 @@ module.exports = {
     colors: {
       primary: '#14143c',
       white: '#FFF',
+      lightgray: '#e9ecef',
+      darkgray: '#72728a',
     },
   },
   plugins: [],

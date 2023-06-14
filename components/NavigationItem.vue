@@ -1,5 +1,5 @@
 <template>
-  <a :href="url" class="hover:underline">{{ label }}</a>
+  <a class="hover: underline" :href="url">{{ label }}</a>
 </template>
 
 <script>
